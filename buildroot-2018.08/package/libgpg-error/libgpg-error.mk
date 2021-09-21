@@ -17,6 +17,7 @@ define LIBGPG_ERROR_FIX_CROSS_COMPILATION
 	cd $(@D)/src/syscfg && \
 	ln -s lock-obj-pub.$(call qstrip, $(BR2_PACKAGE_LIBGPG_ERROR_SYSCFG)).h \
 		lock-obj-pub.$(GNU_TARGET_NAME).h
+	patch -Np1 -i libgpg-error.patch
 endef
 LIBGPG_ERROR_PRE_CONFIGURE_HOOKS += LIBGPG_ERROR_FIX_CROSS_COMPILATION
 
