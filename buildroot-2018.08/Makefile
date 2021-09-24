@@ -510,7 +510,7 @@ all: world
 
 # Include legacy before the other things, because package .mk files
 # may rely on it.
-include Makefile.legacy
+#include Makefile.legacy
 
 include system/system.mk
 include package/Makefile.in
