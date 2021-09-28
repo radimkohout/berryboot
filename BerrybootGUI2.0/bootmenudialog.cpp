@@ -146,7 +146,7 @@ void BootMenuDialog::initialize()
         datadev.clear();
 
         /* Search 10 times */
-        for (unsigned int i=0; i<10 && datadev.isEmpty(); i++)
+        for (unsigned int i=0; i<60 && datadev.isEmpty(); i++)
         {
             if (i != 0)
             {
