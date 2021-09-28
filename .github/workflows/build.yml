@@ -20,6 +20,8 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
+        with:
+          ref: berryboot2018
       # Runs a single command using the runners shell
       - name: Prepare
         run: sudo apt install which sed make binutils gcc g++ patch gzip bzip2 perl tar cpio unzip rsync file bc wget
@@ -28,7 +30,7 @@ jobs:
         run: ./build-berryboot.sh device_pi64
       - name: Upload
         env:
-          GITHUB_TOKEN: ${{ GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
                 sudo tar -zcf output .
                 gh release upload v1.0 output
