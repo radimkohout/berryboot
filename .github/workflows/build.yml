@@ -32,5 +32,5 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-                sudo tar -zcf output .
-                gh release upload v1.0 output
+                sudo tar -czvf output.tar.gz output
+                gh release upload v1.0 output.tar.gz
