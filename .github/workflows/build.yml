@@ -24,7 +24,7 @@ jobs:
       - name: Prepare
         run: |
           sudo apt update
-          sudo apt install which sed make binutils gcc g++ patch gzip bzip2 perl tar cpio unzip rsync file bc wget
+          sudo apt install sed make binutils gcc g++ patch gzip bzip2 perl tar cpio unzip rsync file bc wget
       # Runs a set of commands using the runners shell
       - name: Build
         run: ./build-berryboot.sh device_pi64
