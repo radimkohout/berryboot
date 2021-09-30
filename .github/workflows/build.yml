@@ -33,4 +33,4 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
                 sudo tar -czvf output.tar.gz output
-                gh release upload v1.0 output.tar.gz
+                gh release upload v1.0 output.tar.gz -R radimkohout/berryboot
